@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 import { projects } from '../data/portfolio';
 
+
 const Portfolio: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -13,10 +14,23 @@ const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
-  const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  // Ensure 'Publication' is always last in the filter list
+  const baseCategories = ['Web Development', 'Mobile Development', 'Design', 'Data Science'];
+  const hasPublication = projects.some(p => p.category === 'Publication');
+  const categories = [
+    'All',
+    ...baseCategories.filter(cat => projects.some(p => p.category === cat)),
+    ...(hasPublication ? ['Publication'] : [])
+  ];
+  let filteredProjects = [];
+  if (filter === 'All') {
+    // Show all, but Publication projects always last
+    const nonPublication = projects.filter(p => p.category !== 'Publication');
+    const publication = projects.filter(p => p.category === 'Publication');
+    filteredProjects = [...nonPublication, ...publication];
+  } else {
+    filteredProjects = projects.filter(p => p.category === filter);
+  }
 
   return (
     <section id="portfolio" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
@@ -62,6 +76,7 @@ const Portfolio: React.FC = () => {
             </motion.button>
           ))}
         </motion.div>
+
 
         {/* Projects Grid */}
         <motion.div

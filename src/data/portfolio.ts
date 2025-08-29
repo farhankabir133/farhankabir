@@ -2,6 +2,28 @@ import { Project, Skill, Experience, Testimonial, BlogPost } from '../types/port
 
 export const projects: Project[] = [
   {
+    id: 'pub1',
+    title: 'Depression Detection From Social Media Textual Data Using Natural Language Processing and Machine Learning Techniques',
+    description: 'Published at ICCIT 2023',
+    longDescription: 'This paper presents a novel approach for detecting depression from social media textual data using NLP and ML techniques. Published at ICCIT 2023.',
+  image: 'https://images.pexels.com/photos/256369/pexels-photo-256369.jpeg?auto=compress&fit=crop&w=800&q=80',
+    category: 'Publication',
+    technologies: ['NLP', 'ML', 'Social Media'],
+    liveUrl: 'https://ieeexplore.ieee.org/document/10441612',
+    featured: true
+  },
+  {
+    id: 'pub2',
+    title: 'Emotion Detection From Textual Data Using Natural Language Processing and Machine Learning Techniques',
+    description: 'Published at ECCE 2025',
+    longDescription: 'This paper explores emotion detection from text using advanced NLP and ML methods. Published at ECCE 2025.',
+  image: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&fit=crop&w=800&q=80',
+    category: 'Publication',
+    technologies: ['NLP', 'ML', 'Emotion Detection'],
+    liveUrl: 'https://ieeexplore.ieee.org/document/11013284',
+    featured: true
+  },
+  {
     id: '1',
     title: 'E-Commerce Platform',
     description: 'Modern e-commerce solution with advanced features',
@@ -117,7 +139,7 @@ export const experiences: Experience[] = [
     company: 'WebAgency',
     period: '2019 - 2020',
     description: 'Developed websites and web applications, learned modern development practices and agile methodologies.'
-  }
+  },
 ];
 
 export const testimonials: Testimonial[] = [
@@ -179,3 +201,5 @@ export const blogPosts: BlogPost[] = [
     category: 'Development'
   }
 ];
+
+// Publication entries should be in the projects array above, not here.

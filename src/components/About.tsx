@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
+// ...removed conflict markers...
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -22,13 +19,8 @@ const About: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <section id="about" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
   <section id="about" className="relative overflow-hidden py-20 transition-colors duration-300">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}

@@ -18,6 +18,7 @@ const Contact: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -29,15 +30,25 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setErrorMsg(null);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to send message.');
+      }
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch (err: any) {
+      setErrorMsg(err.message || 'Failed to send message.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -50,16 +61,25 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+8801783165726',
-      href: 'tel:+15551234567'
+      value: '+880-1783165726',
+      href: 'tel:+8801783165726'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Rajshahi, Bangladesh',
+      value: 'Kazla, Rajshahi, Bangladesh',
       href: '#'
     }
   ];
+
+  // Gravatar SVG icon styled to match Lucide icons
+  const GravatarIcon = (props: any) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="12" cy="12" r="10" fill="#1A1A1A" stroke="none" />
+      <circle cx="12" cy="12" r="8" fill="none" stroke="#fff" strokeWidth="1.5" />
+      <circle cx="12" cy="12" r="4" fill="#fff" stroke="none" />
+    </svg>
+  );
 
   const socialLinks = [
     { icon: Facebook, href: 'https://www.facebook.com/baba111b/', label: 'Facebook' },
@@ -67,6 +87,7 @@ const Contact: React.FC = () => {
     { icon: Linkedin, href: 'https://www.linkedin.com/in/farhan-kabir-142634198/', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/farhankabir133', label: 'GitHub' },
     { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: GravatarIcon, href: 'https://www.gravatar.com/fk133', label: 'Gravatar' },
   ];
 
   return (
@@ -116,6 +137,11 @@ const Contact: React.FC = () => {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {errorMsg && (
+                    <div className="bg-red-100 text-red-700 px-4 py-2 rounded mb-2 text-center animate-fade-in">
+                      {errorMsg}
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">

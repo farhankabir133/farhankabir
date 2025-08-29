@@ -16,12 +16,8 @@ import AdminDashboard from './components/AdminDashboard';
 
 function App() {
   useEffect(() => {
-<<<<<<< HEAD
-=======
     // Always scroll to top (Hero section) on initial load
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-
->>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
     // Smooth scrolling for anchor links
     const handleSmoothScroll = (e: Event) => {
       const target = e.target as HTMLAnchorElement;
@@ -49,11 +45,7 @@ function App() {
     // Delay ad initialization to ensure DOM is ready
     const timer = setTimeout(initializeAds, 1000);
 
-<<<<<<< HEAD
-      clearTimeout(timer);
-=======
-    clearTimeout(timer);
->>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
+  clearTimeout(timer);
     return () => document.removeEventListener('click', handleSmoothScroll);
   }, []);
 
