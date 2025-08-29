@@ -236,3 +236,34 @@ MIT — see [LICENSE](LICENSE)
 </p>
 
 
+<div align="center">
+
+## 💖 Acknowledgments
+
+**Built with ❤️ by [Farhan Kabir](https://farhankabir.netlify.app)**
+
+### 🙏 Special Thanks
+
+- **OpenAI** for GPT-4o-mini API
+- **Supabase** for backend infrastructure  
+- **Vercel** for hosting and deployment
+- **React Community** for amazing tools and libraries
+
+### ⭐ Show Your Support
+
+If you found this project helpful, please consider:
+
+[![Star on GitHub](https://img.shields.io/github/stars/farhankabir133/fk?style=social)](https://github.com/farhankabir133/fk)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/farhankabir133?style=social)](https://twitter.com/farhankabir133)
+[![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=social&logo=linkedin)](https://linkedin.com/in/farhankabir133)
+
+---
+
+<p align="center">
+  <strong>🚀 Ready to build something amazing? Let's connect!</strong>
+</p>
+
+</div>
+
+
+
