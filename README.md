@@ -231,9 +231,6 @@ MIT — see [LICENSE](LICENSE)
 
 ---
 
-<p align="center">
-  Built with ❤️ by <a href="https://farhankabir.netlify.app">Farhan Kabir</a>
-</p>
 
 
 <div align="center">
@@ -264,6 +261,7 @@ If you found this project helpful, please consider:
 </p>
 
 </div>
+
 
 
 
