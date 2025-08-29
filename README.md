@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/farhankabir133/portfolio/main/public/chatbot-logo.svg" alt="AI Assistant Logo" height="120" />
 </p>
-<h1 align="center">🤖 AI Assistant Chatbot for Portfolio Website</h1>
+<h1 align="center">🤖 A Personal Modern Website with AI Assistant Chatbot</h1>
 <p align="center">
   <b>A next-generation AI assistant chatbot integrated with Farhan Kabir's portfolio.<br>Modern UX, Web3 features, and real-time analytics — right on your site.</b>
 </p>
@@ -234,3 +234,4 @@ MIT — see [LICENSE](LICENSE)
 <p align="center">
   Built with ❤️ by <a href="https://farhankabir.netlify.app">Farhan Kabir</a>
 </p>
+
