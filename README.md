@@ -237,7 +237,7 @@ MIT — see [LICENSE](LICENSE)
 
 ## 💖 Acknowledgments
 
-**Built with ❤️ by [Farhan Kabir](https://farhankabir.netlify.app)**
+**Built with ❤️ by [Farhan Kabir](https://fkabir.netlify.app)**
 
 ### 🙏 Special Thanks
 
@@ -261,6 +261,7 @@ If you found this project helpful, please consider:
 </p>
 
 </div>
+
 
 
 
