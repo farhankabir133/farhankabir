@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import VirtualTerminalBackground from './VirtualTerminalBackground';
+>>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { skills } from '../data/portfolio';
@@ -20,8 +24,15 @@ const Skills: React.FC = () => {
   const filteredSkills = skills.filter(skill => skill.category === activeCategory);
 
   return (
+<<<<<<< HEAD
     <section id="skills" className="py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+    <section id="skills" className="relative py-20 bg-slate-50 dark:bg-slate-800 transition-colors duration-300 overflow-hidden">
+      {/* Virtual Terminal Animated Background */}
+      <VirtualTerminalBackground />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}

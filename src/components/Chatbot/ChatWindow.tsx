@@ -15,7 +15,10 @@ import {
   Phone,
   X
 } from 'lucide-react';
+<<<<<<< HEAD
 import { useSpeechSynthesis, useSpeechRecognition } from 'react-speech-kit';
+=======
+>>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { ChatMessage, ChatContext, Lead } from '../../types/chatbot';
 import { chatbotService } from '../../lib/openai';
@@ -49,6 +52,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose, isDarkMode }) 
   const [leadForm, setLeadForm] = useState({ name: '', email: '' });
   const [sessionId, setSessionId] = useState<string>('');
 
+<<<<<<< HEAD
   // Voice features
   const [isVoiceEnabled, setIsVoiceEnabled] = useState(false);
   const [isListening, setIsListening] = useState(false);
@@ -59,6 +63,9 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose, isDarkMode }) 
       setIsListening(false);
     }
   });
+=======
+  // Voice features removed due to package incompatibility
+>>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
 
   // Web3 integration
   const { address, isConnected } = useAccount();

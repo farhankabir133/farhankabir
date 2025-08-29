@@ -1,9 +1,43 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+=======
+/* Holographic Data Streams Animations */
+.animate-holo-flicker {
+  animation: holo-flicker 0.18s infinite steps(2);
+}
+@keyframes holo-flicker {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.animate-holo-float {
+  animation: holo-float 4s ease-in-out infinite;
+}
+@keyframes holo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.animate-holo-burst {
+  animation: holo-burst 1.2s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes holo-burst {
+  0% { opacity: 0; transform: scale(0.7) translateY(20px); filter: blur(6px); }
+  60% { opacity: 1; transform: scale(1.08) translateY(-6px); filter: blur(0); }
+  100% { opacity: 0; transform: scale(0.95) translateY(-18px); filter: blur(2px); }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Custom fonts */
+>>>>>>> a0293a5 (Hero and Skills-Expertise Background updated)
 
 @layer base {
   html {
