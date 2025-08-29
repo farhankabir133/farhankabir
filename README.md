@@ -1,6 +1,6 @@
 <!-- Hero Section -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/farhankabir133/portfolio/main/public/chatbot-logo.svg" alt="AI Assistant Logo" height="120" />
+  <img src="https://github.com/farhankabir133/fk/blob/my-feature/assets/fk.png" alt="FK's Personal Site" height="120" />
 </p>
 <h1 align="center">🤖 A Personal Modern Website with AI Assistant Chatbot</h1>
 <p align="center">
@@ -234,4 +234,5 @@ MIT — see [LICENSE](LICENSE)
 <p align="center">
   Built with ❤️ by <a href="https://farhankabir.netlify.app">Farhan Kabir</a>
 </p>
+
 
