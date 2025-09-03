@@ -18,7 +18,7 @@ import {
 import { useSpeechSynthesis, useSpeechRecognition } from 'react-speech-kit';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { ChatMessage, ChatContext, Lead } from '../../types/chatbot';
-import { chatbotService } from '../../lib/openai';
+import { chatbotService } from '../../lib/chatbot';
 import { supabase } from '../../lib/supabase';
 import { analytics } from '../../lib/analytics';
 
