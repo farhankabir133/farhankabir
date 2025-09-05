@@ -15,7 +15,7 @@ import {
   Phone,
   X
 } from 'lucide-react';
-import { useSpeechSynthesis, useSpeechRecognition } from '../../lib/react-speech-kit-next';
+import { useSpeechSynthesis, useSpeechRecognition } from 'react-speech-kit-next';
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
 import { ChatMessage, ChatContext, Lead } from '../../types/chatbot';
 import { chatbotService } from '../../lib/chatbot';
