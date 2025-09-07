@@ -86,7 +86,8 @@ const Hero: React.FC = () => {
             />
           </motion.button>
           <motion.a
-            href="/Resume_of_FK.pdf"
+            href="https://github.com/farhankabir133/farhankabir/blob/main/Resume_of_FK.pdf"
+            //<href="https://github.com/farhankabir133/farhankabir">
             download
             className="group flex items-center gap-2 px-8 py-4 border-2 border-amber-400 text-amber-400 font-semibold rounded-full hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 cursor-pointer"
             whileHover={{ scale: 1.05, y: -2 }}
