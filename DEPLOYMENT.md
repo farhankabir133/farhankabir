@@ -60,16 +60,21 @@ Create `vercel.json` in your root directory:
 Since you're already on Netlify, here's how to add the chatbot:
 
 #### Steps:
-1. **Build and Deploy**
+1. **Node.js Version**
+   - Ensure your `package.json` includes the correct Node.js version in the `engines` field
+   - This project requires Node.js 20.x for optimal compatibility
+   - For detailed instructions on managing Node.js versions in Netlify, see: [Netlify Node.js Documentation](https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-and-javascript)
+
+2. **Build and Deploy**
    ```bash
    npm run build
    ```
 
-2. **Environment Variables**
+3. **Environment Variables**
    - Go to Netlify Dashboard → Site Settings → Environment Variables
    - Add all required environment variables
 
-3. **Netlify Functions (Optional)**
+4. **Netlify Functions (Optional)**
    Create `netlify/functions/` directory for serverless functions:
 
    ```javascript
